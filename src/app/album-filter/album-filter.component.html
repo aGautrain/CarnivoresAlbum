@@ -1,0 +1,28 @@
+<section class="section--center mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--12-col">
+        <h3>Photographies</h3>
+        Accéder aux photos en triant par spécimen ou par date de capture. Les lignes grisées ou barrées n'apparaitront pas dans l'album.
+
+        <!-- Chaque famille est représentée par une ligne qu'il est possible d'étendre en cliquant dessus -->
+        <h5>Filtrer par espèce</h5>
+        <div *ngFor="let family of families" class="filter-block-item">
+            <h5 (click)="userExpand(family)" [ngClass]="{'filter-block-item__item': true, 'filter-block-item__item-clickable': familyHasSpecies(family)}">
+                
+                
+                <i *ngIf="!showingSpecies(family)" class="material-icons">keyboard_arrow_right</i>
+                <i *ngIf="showingSpecies(family)" class="material-icons">keyboard_arrow_down</i>
+                <i *ngIf="!family.isShown || !familyHasSpecies(family)" class="material-icons">label_outline</i>
+                <i *ngIf="family.isShown && familyHasSpecies(family)" class="material-icons">label</i>
+                {{ family.familyName }}
+            </h5>
+            <ul *ngIf="showingSpecies(family)" class="filter-block__specy">
+                <li *ngFor="let specy of family.species" (click)="userSwitchSpecy(specy)" [ngClass]="{'filter-block-item__item': true, 'filter-block-item__item-clickable': specyHasSamples(specy), 'filter-block-item__hidden': !specy.isShown}">
+                    <i *ngIf="!specy.isShown" class="material-icons">label_outline</i>
+                    <i *ngIf="specy.isShown" class="material-icons">label</i>
+                    {{family.familyName}} {{ specy.name }} ({{ specy.samples.length }})
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>

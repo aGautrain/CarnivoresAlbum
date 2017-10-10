@@ -1,0 +1,15 @@
+<section class="section--center mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--12-col">
+        <h5>Album</h5>
+        <p>
+            Parcourez les images filtrées ci-dessous et cliquez pour zoomer.<br/>
+            Chaque image dispose de trois étiquettes, correspondant respectivement à l'espèce auquel appartient l'échantillon sur la photo, l'identifiant de lot et la date de capture.
+        </p>
+        <p>
+            <b>{{ getNbShownSamples() }}</b>
+        </p>
+        <div class="mdl-grid">
+            <picture *ngFor="let sample of shownSamples()" [sample]="sample" class="mdl-cell mdl-cell--6-col"></picture>
+        </div>
+    </div>
+</section>

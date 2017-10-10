@@ -1,0 +1,13 @@
+<article>
+    <div class="mdl-chips">
+        <span *ngFor="let tag of getTags()" class="mdl-chip">
+        <span class="mdl-chip__text">{{ tag }}</span>
+        </span>
+    </div>
+    <div (click)="switchZoom()" [ngClass]="{'picture-img': true, 'picture-img__zoomed-in': zoomed}">
+        <img class="picture-img__img-overview" [src]="getUrl()" alt="" title=""
+             />
+        <img class="picture-img__img-zoom" [src]="getUrl()" alt="" title="" width="1164px" height="1545px" />
+        <div class="picture-img__txt-action">Click to zoom {{ getNextZoom() }}</div>
+    </div>
+</article>

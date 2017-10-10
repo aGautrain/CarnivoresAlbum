@@ -1,0 +1,41 @@
+:host .filter-block-item .material-icons {
+    position: relative;
+    top: 6px;
+}
+
+:host ul.filter-block__specy {
+    list-style-type: none;
+}
+
+:host .filter-block-item__item {
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+:host .filter-block-item__item-clickable:hover {
+    cursor: pointer;
+}
+
+:host .filter-block-item__item-clickable:active {
+    position: relative;
+    top: -2px;
+}
+
+:host .filter-block-item__item:not(.filter-block-item__item-clickable):hover {
+    cursor: not-allowed;
+}
+
+:host .filter-block-item__item-clickable {
+    transition: 0.2s;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    text-decoration: none;
+    opacity: 1;
+}
+
+
+
+:host .filter-block-item__hidden {
+    opacity: 0.5;
+}

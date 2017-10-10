@@ -1,0 +1,46 @@
+:host section {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+/*
+:host .karnivores__text-specy:hover > .section__circle-container {
+    opacity: 1;
+}*/
+
+:host .karnivores__text-specy {
+    padding-top: 40px !important;
+    padding-left: 100px !important;
+    padding-right: 30px !important;
+    padding-bottom: 20px !important;
+    text-align: justify;
+    z-index: 10;
+}
+
+:host .karnivores__text-specy h4 {
+    margin-left: 20px;
+}
+
+:host .section__circle-container {
+    opacity: 0.5;
+}
+
+:host .karnivores__picture {
+    width: 200px !important;
+    height: 200px !important;
+    border-radius: 20px !important;
+}
+
+:host .karnivores__picture-nepenthes {
+    background: url('../../assets/images/nepenthes_thumbnail.png');
+}
+
+:host .karnivores__picture-dionaea {
+    background: url('../../assets/images/dionea_thumbnail.png');
+}
+
+:host .karnivores__picture-drosera {
+    background: url('../../assets/images/drosera_thumbnail.png');
+}

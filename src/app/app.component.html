@@ -1,0 +1,51 @@
+<!--<header>
+    En-tête et onglets
+    <nav>
+        <a [routerLink]="['/']">Accueil</a>
+        <a [routerLink]="['/album']">Photos</a>
+        <a [routerLink]="['/book']">Journal</a>
+        <a [routerLink]="['/faq']">Liens utiles</a>
+    </nav>
+</header>
+
+<section>
+    <router-outlet></router-outlet>
+</section>-->
+
+<header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+    </div>
+    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        <h2>Karnivores &amp; Curiosité</h2>
+    </div>
+    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+    </div>
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+        <a [routerLink]="['/']" [ngClass]="{'mdl-layout__tab': true, 'is-active': isActiveRoute('/')}">Accueil</a>
+        <a [routerLink]="['/album']" [ngClass]="{'mdl-layout__tab': true, 'is-active': isActiveRoute('/album')}">Photos</a>
+        <a [routerLink]="['/book']" [ngClass]="{'mdl-layout__tab': true, 'is-active': isActiveRoute('/book')}">Journal</a>
+        <a [routerLink]="['/faq']" [ngClass]="{'mdl-layout__tab': true, 'is-active': isActiveRoute('/faq')}">Liens divers</a>
+    </div>
+</header>
+
+<main class="mdl-layout__content">
+    
+    <router-outlet class="mdl-layout__tab-panel is-active" id="overview"></router-outlet>
+
+    <footer class="mdl-mega-footer">
+        <div class="mdl-mega-footer--bottom-section">
+            <div class="mdl-logo">
+                Informations relatives au site
+            </div>
+            <ul class="mdl-mega-footer--link-list">
+                <li><a href="https://getmdl.io/index.html">Template utilisé</a></li>
+                <li>Les images appartiennent à leur propriétaire respectif</li>
+            </ul>
+        </div>
+    </footer>
+</main>
+
+<div *ngIf="fadeblockShown" id="fade-block">
+
+
+</div>

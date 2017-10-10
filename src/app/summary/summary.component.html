@@ -1,0 +1,42 @@
+          
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h3 class="mdl-cell mdl-cell--12-col">Espèces étudiées</h3>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary karnivores__picture karnivores__picture-nepenthes"></div>
+                </div>
+                <div class="section__text karnivores__text-specy mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h4>Nepenthes</h4>
+                  Les plantes du type <i>Nepenthes</i> capturent leurs proies dans des urnes pouvant mesurer de quelques millimètres à quelques dizaines de centimètres. Les proies y sont alors digérées directement par la plante ou bien par une des espèces vivant en symbiose avec celle-ci. <a [routerLink]="['/album', 'nepenthes']">Accéder aux photos</a>.
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary karnivores__picture karnivores__picture-dionaea"></div>
+                </div>
+                <div class="section__text karnivores__text-specy mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h4>Dionées</h4>
+                  Certainement parmi les plus connues, les plantes carnivores de type <i>Dionaea</i> ont la particularité de posséder des feuilles en forme de piège à loup. Celles-ci sont dotées de poils sensitifs qui activent la capture lorsque nécessaire. <a [routerLink]="['/album', 'dionaea']">Accéder aux photos</a>.
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary karnivores__picture karnivores__picture-drosera"></div>
+                </div>
+                <div class="section__text karnivores__text-specy mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h4>Droseras</h4>
+                  Pourvues de pièges à glue, les plantes du type <i>Drosera</i> disposent de feuilles capables de s'enrouler autour des proies, une fois celles-ci collées au mucilage. La digestion peut alors débuter et ainsi permettre d'assimiler un apport en azote bénéfique à la plante. <a [routerLink]="['/album', 'drosera']">Accéder aux photos</a>.
+                </div>
+              </div>
+              <div class="mdl-card__actions">
+                <a href="#" class="mdl-button">En savoir plus</a>
+              </div>
+            </div>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
+              <i class="material-icons">more_vert</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2">
+              <li class="mdl-menu__item">Nepenthes</li>
+              <li class="mdl-menu__item">Dionées</li>
+              <li class="mdl-menu__item">Droseras</li>
+			  <li class="mdl-menu__item" disabled>Sarracenia</li>
+			  <li class="mdl-menu__item" disabled>Pinguicula</li>
+            </ul>
+          </section>
